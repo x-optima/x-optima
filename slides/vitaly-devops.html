@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Виталий Кучин · DevOps (практика)</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --line: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #2dd4bf;
+      --accent-dim: #115e59;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: #020617;
+      color: var(--text);
+      font-family: Ubuntu, "Liberation Sans", Arial, sans-serif;
+    }
+    .stage {
+      width: 1920px;
+      height: 1080px;
+      margin: 0 auto;
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+    .accent-bar {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 14px;
+      background: var(--accent);
+    }
+    .frame {
+      height: 100%;
+      padding: 72px 88px 56px 96px;
+      display: flex;
+      flex-direction: column;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 48px;
+    }
+    .name {
+      font-size: 64px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+    .role {
+      margin-top: 10px;
+      font-size: 28px;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding-top: 12px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 18px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .pitch {
+      margin-top: 48px;
+      max-width: 1480px;
+      font-size: 30px;
+      line-height: 1.45;
+      color: #e2e8f0;
+      font-weight: 400;
+    }
+    .pitch strong { color: var(--text); font-weight: 600; }
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 36px;
+    }
+    .tag {
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-size: 18px;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-top: 52px;
+      flex: 1;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px 32px 32px;
+      min-height: 280px;
+    }
+    .card-kicker {
+      font-size: 15px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .card h2 {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .card p {
+      font-size: 20px;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 20px;
+    }
+    .foot a { color: var(--muted); text-decoration: none; }
+    .foot .sep { margin: 0 14px; color: var(--line); }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="accent-bar"></div>
+    <div class="frame">
+      <div class="top">
+        <div>
+          <div class="name">Виталий Кучин</div>
+          <div class="role">DevOps (практика)</div>
+        </div>
+        <div class="meta">
+          <span class="pill">удалённо</span>
+          <span class="pill">совместительство</span>
+          <span class="pill">Россия</span>
+        </div>
+      </div>
+
+      <p class="pitch">
+        С июля 2025 — практика DevOps: курс Нетологии и стенды в Yandex Cloud.
+        <strong>Ищу удалённую команду:</strong> Terraform, Ansible, CI, мониторинг на виртуальных машинах.
+      </p>
+
+      <div class="stack">
+        <span class="tag">Yandex Cloud</span>
+        <span class="tag">Terraform</span>
+        <span class="tag">Ansible</span>
+        <span class="tag">GitLab CI</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Prometheus</span>
+        <span class="tag">Grafana</span>
+        <span class="tag">PostgreSQL</span>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-kicker">лучший стенд</div>
+          <h2>terraform6</h2>
+          <p>VPC, FastAPI в Docker, Managed MySQL, секреты в Lockbox, remote state.</p>
+        </article>
+        <article class="card">
+          <div class="card-kicker">CI в облаке</div>
+          <h2>GitLab / TeamCity</h2>
+          <p>Self-hosted CI на ВМ. Maven: test вне main, deploy в Nexus с main.</p>
+        </article>
+        <article class="card">
+          <div class="card-kicker">наблюдаемость</div>
+          <h2>Prometheus + Grafana</h2>
+          <p>Метрики, дашборды, Alertmanager. Логи: ELK и Vector + ClickHouse.</p>
+        </article>
+      </div>
+
+      <div class="foot">
+        <div>
+          <a href="https://github.com/x-optima">github.com/x-optima</a>
+          <span class="sep">·</span>
+          <a href="https://github.com/x-optima/Netology-DevOps">Netology-DevOps</a>
+        </div>
+        <div>
+          <a href="https://t.me/kuchinvn">t.me/kuchinvn</a>
+          <span class="sep">·</span>
+          <a href="mailto:vkuchin-home@yandex.ru">vkuchin-home@yandex.ru</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
