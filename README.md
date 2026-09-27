@@ -72,7 +72,21 @@ DevOps training + Yandex Cloud labs since July 2025. Part-time, remote. Best rep
 
 ---
 
-## Контакты
+## Как пересобрать слайды
+
+```bash
+cd slides
+pip install -r requirements.txt
+python build_slide.py            # оба формата (pptx + png)
+python build_slide.py --format pptx   # только PPTX
+python build_slide.py --format png    # только PNG
+```
+
+Зависимости: `python-pptx`, `Pillow`. Шрифты: Ubuntu (fallback: Liberation, DejaVu).
+
+---
+
+## Контакт
 
 - Email: [vkuchin-home@yandex.ru](mailto:vkuchin-home@yandex.ru)
 - Telegram: [@kuchinvn](https://t.me/kuchinvn)

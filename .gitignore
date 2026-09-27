@@ -4,3 +4,5 @@ hh-resume.md
 *.canvas.tsx
 .cursor/
 .venv-slides/
+slides/*.pptx
+slides/*.png

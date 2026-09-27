@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Build a 16:9 self-intro slide (PPTX + PNG) from the GitHub profile copy."""
 
+import argparse
+import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -22,10 +24,39 @@ ACCENT = (45, 212, 191)
 ACCENT_DIM = (17, 94, 89)
 PITCH = (226, 232, 240)
 
-FONT_DIR = Path("/usr/share/fonts/truetype/ubuntu")
-FONT_BOLD = FONT_DIR / "Ubuntu-B.ttf"
-FONT_REG = FONT_DIR / "Ubuntu-R.ttf"
-FONT_MED = FONT_DIR / "Ubuntu-M.ttf"
+# Font paths: try Ubuntu first, then fall back to common system locations
+FONT_CANDIDATES = {
+    "Ubuntu-B.ttf": [
+        Path("/usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf"),
+        Path("/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"),
+        Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
+    ],
+    "Ubuntu-R.ttf": [
+        Path("/usr/share/fonts/truetype/ubuntu/Ubuntu-R.ttf"),
+        Path("/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"),
+        Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"),
+    ],
+    "Ubuntu-M.ttf": [
+        Path("/usr/share/fonts/truetype/ubuntu/Ubuntu-M.ttf"),
+        Path("/usr/share/fonts/truetype/liberation/LiberationSans.ttf"),
+        Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"),
+    ],
+}
+
+
+def find_font(name: str) -> Path:
+    for candidate in FONT_CANDIDATES[name]:
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError(
+        f"Could not find font {name}. Tried: {[str(c) for c in FONT_CANDIDATES[name]]}"
+    )
+
+
+FONT_DIR = find_font("Ubuntu-B.ttf").parent
+FONT_BOLD = find_font("Ubuntu-B.ttf")
+FONT_REG = find_font("Ubuntu-R.ttf")
+FONT_MED = find_font("Ubuntu-M.ttf")
 
 
 def font(path: Path, size: int) -> ImageFont.FreeTypeFont:
@@ -250,8 +281,29 @@ def build_png() -> Path:
     return path
 
 
+def main():
+    parser = argparse.ArgumentParser(description="Build self-intro slide (PPTX + PNG)")
+    parser.add_argument("--format", choices=["pptx", "png", "both"], default="both",
+                        help="Output format (default: both)")
+    args = parser.parse_args()
+
+    outputs = []
+    if args.format in ("pptx", "both"):
+        try:
+            pptx = build_pptx()
+            outputs.append(str(pptx))
+        except Exception as e:
+            print(f"PPTX build failed: {e}", file=sys.stderr)
+    if args.format in ("png", "both"):
+        try:
+            png = build_png()
+            outputs.append(str(png))
+        except Exception as e:
+            print(f"PNG build failed: {e}", file=sys.stderr)
+
+    for out in outputs:
+        print(out)
+
+
 if __name__ == "__main__":
-    pptx = build_pptx()
-    png = build_png()
-    print(pptx)
-    print(png)
+    main()
