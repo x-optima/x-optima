@@ -62,8 +62,12 @@
 | [dbbackup](https://github.com/x-optima/dbbackup) | Стратегии backup PostgreSQL: pg_dump, PITR, cron — отчёт | PostgreSQL · backup |
 | [monlog3](https://github.com/x-optima/monlog3) | Elastic Stack 8.x: hot/warm ES, Logstash, Kibana, Filebeat | Elasticsearch · Logstash · Kibana · Filebeat · Docker |
 | [elk](https://github.com/x-optima/elk) | Централизованный сбор и просмотр логов | ELK · Docker · Kibana |
-| [kubernetes1-5](https://github.com/x-optima/kubernetes1) | MicroK8s, Pod/Deployment/Service/Ingress/Volumes | Kubernetes · MicroK8s · kubectl |
-| [microservices1-2](https://github.com/x-optima/microservices1) | API Gateway на NGINX, микросервисная архитектура | NGINX · API Gateway · Docker Compose |
+| [kubernetes1](https://github.com/x-optima/kubernetes1) | MicroK8S, kubectl, установка, dashboard | Kubernetes · MicroK8s · kubectl |
+| [kubernetes2](https://github.com/x-optima/kubernetes2) | Pod, Service, port-forward, развёртывание | Kubernetes · Pods · Services |
+| [kubernetes3](https://github.com/x-optima/kubernetes3) | Deployment, Service, init-контейнеры, масштабирование | Kubernetes · Deployments · Init Containers |
+| [kubernetes4](https://github.com/x-optima/kubernetes4) | ClusterIP, NodePort, Ingress, сетевое взаимодействие | Kubernetes · Ingress · Networking |
+| [kubernetes5](https://github.com/x-optima/kubernetes5) | emptyDir, PersistentVolume, PVC, StorageClass | Kubernetes · Volumes · Storage |
+| [microservices1-2](https://github.com/x-optima/Netology-DevOps#микросервисы) | API Gateway на NGINX, микросервисная архитектура | NGINX · API Gateway · Docker Compose |
 | [pobeda_practice1](https://github.com/x-optima/pobeda_practice1) | Flask-приложение, SQLite, REST API /users | Python · Flask · SQLite |
 | [tivali-api-tests](https://github.com/x-optima/tivali-api-tests) | API-тесты на Python | Python · API testing |
 
