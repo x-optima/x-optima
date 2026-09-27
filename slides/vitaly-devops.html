@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Виталий Кучин — DevOps (практика). Ищу удалённую команду: Terraform, Ansible, CI, мониторинг на виртуальных машинах." />
+  <meta name="description" content="Виталий Кучин — DevOps (практика). Ищу удалённую команду: Terraform, Ansible, CI, мониторинг, Kubernetes." />
   <meta name="author" content="Виталий Кучин" />
   <title>Виталий Кучин · DevOps (практика)</title>
   <style>
@@ -103,34 +103,34 @@
     .cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 24px;
-      margin-top: 52px;
+      gap: 18px;
+      margin-top: 32px;
       flex: 1;
     }
     .card {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 16px;
-      padding: 28px 32px 32px;
-      min-height: 280px;
+      padding: 22px 24px 24px;
+      min-height: 210px;
     }
     .card-kicker {
-      font-size: 15px;
+      font-size: 13px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--accent);
       font-weight: 500;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
     .card h2 {
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
     .card p {
-      font-size: 20px;
-      line-height: 1.45;
+      font-size: 18px;
+      line-height: 1.4;
       color: var(--muted);
     }
     .foot {
@@ -138,8 +138,8 @@
       justify-content: space-between;
       align-items: center;
       border-top: 1px solid var(--line);
-      padding-top: 22px;
-      margin-top: 8px;
+      padding-top: 16px;
+      margin-top: 4px;
       color: var(--muted);
       font-size: 20px;
     }
@@ -164,8 +164,8 @@
       </div>
 
       <p class="pitch">
-        С июля 2025 — практика DevOps: курс Нетологии и стенды в Yandex Cloud.
-        <strong>Ищу удалённую команду:</strong> Terraform, Ansible, CI, мониторинг на виртуальных машинах.
+        С июля 2025 — практика DevOps: курс Нетологии, стенды в Yandex Cloud и Kubernetes.
+        <strong>Ищу удалённую команду:</strong> Terraform, Ansible, CI, мониторинг, Kubernetes.
       </p>
 
       <div class="stack">
@@ -174,9 +174,11 @@
         <span class="tag">Ansible</span>
         <span class="tag">GitLab CI</span>
         <span class="tag">Docker</span>
+        <span class="tag">Kubernetes</span>
         <span class="tag">Prometheus</span>
         <span class="tag">Grafana</span>
         <span class="tag">PostgreSQL</span>
+        <span class="tag">NGINX</span>
       </div>
 
       <div class="cards">
@@ -194,6 +196,21 @@
           <div class="card-kicker">наблюдаемость</div>
           <h2>Prometheus + Grafana</h2>
           <p>Метрики, дашборды, Alertmanager. Логи: ELK и Vector + ClickHouse.</p>
+        </article>
+        <article class="card">
+          <div class="card-kicker">оркестрация</div>
+          <h2>Kubernetes</h2>
+          <p>MicroK8s: Pod, Deployment, Service, Ingress, Volumes. 5 работ курса.</p>
+        </article>
+        <article class="card">
+          <div class="card-kicker">микросервисы</div>
+          <h2>API Gateway</h2>
+          <p>NGINX как API Gateway, Flask + MinIO, архитектура микросервисов.</p>
+        </article>
+        <article class="card">
+          <div class="card-kicker">практика</div>
+          <h2>Flask + API tests</h2>
+          <p>Flask-приложение с SQLite, REST API. Тесты API на Python.</p>
         </article>
       </div>
 

@@ -37,10 +37,11 @@
 |---------|------------|
 | Cloud / IaC | Yandex Cloud, Terraform, Ansible |
 | CI/CD | GitLab CI, TeamCity, Jenkins, GitHub Actions |
-| Containers / HA | Docker, Compose, HAProxy, Keepalived |
+| Containers / Orchestration | Docker, Compose, Kubernetes (MicroK8s), HAProxy, Keepalived |
 | Observability | Prometheus, Grafana, Zabbix, ELK, Filebeat, Vector, Alertmanager |
 | Data | PostgreSQL, MySQL, Redis, RabbitMQ, ClickHouse |
 | OS / Scripting | Linux (Debian/Ubuntu), Bash, Python |
+| API / Microservices | NGINX (API Gateway), Flask, REST |
 
 ---
 
@@ -61,6 +62,10 @@
 | [dbbackup](https://github.com/x-optima/dbbackup) | Стратегии backup PostgreSQL: pg_dump, PITR, cron — отчёт | PostgreSQL · backup |
 | [monlog3](https://github.com/x-optima/monlog3) | Elastic Stack 8.x: hot/warm ES, Logstash, Kibana, Filebeat | Elasticsearch · Logstash · Kibana · Filebeat · Docker |
 | [elk](https://github.com/x-optima/elk) | Централизованный сбор и просмотр логов | ELK · Docker · Kibana |
+| [kubernetes1-5](https://github.com/x-optima/kubernetes1) | MicroK8s, Pod/Deployment/Service/Ingress/Volumes | Kubernetes · MicroK8s · kubectl |
+| [microservices1-2](https://github.com/x-optima/microservices1) | API Gateway на NGINX, микросервисная архитектура | NGINX · API Gateway · Docker Compose |
+| [pobeda_practice1](https://github.com/x-optima/pobeda_practice1) | Flask-приложение, SQLite, REST API /users | Python · Flask · SQLite |
+| [tivali-api-tests](https://github.com/x-optima/tivali-api-tests) | API-тесты на Python | Python · API testing |
 
 → Полный каталог: **[Netology-DevOps](https://github.com/x-optima/Netology-DevOps)**
 
