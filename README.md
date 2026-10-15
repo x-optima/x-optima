@@ -2,7 +2,7 @@
 
 **Формат:** удалённо · частичная занятость · совместительство  
 **Локация:** Россия, Республика Саха (Якутия)  
-**GitHub:** [@x-optima](https://github.com/x-optima) · **Портфолио:** [x-optima](https://github.com/x-optima/x-optima) · **Каталог учебных проектов:** [Netology-DevOps](https://github.com/x-optima/Netology-DevOps)
+**GitHub:** [@x-optima](https://github.com/x-optima)
 
 С июля 2025 — DevOps: курс Нетологии и стенды в Yandex Cloud.
 
@@ -20,7 +20,6 @@
 | **Фокус** | IaC, Linux, CI/CD, observability, PostgreSQL, HA/backup |
 | **Облако** | Yandex Cloud: сеть → ВМ → сервис → мониторинг |
 | **Подход** | инфраструктура как код, воспроизводимые учебные стенды |
-| **Каталог учебных проектов** | [Netology-DevOps](https://github.com/x-optima/Netology-DevOps) — домашние работы и стенды курса |
 
 ---
 
@@ -57,15 +56,6 @@
 | [ansible3](https://github.com/x-optima/ansible3) | Автоматизированное развёртывание стека сбора и отображения логов | Ansible · ClickHouse · Vector |
 | [kubernetes10](https://github.com/x-optima/kubernetes10) | Практика сетевых политик и развёртывания Kubernetes-кластера | Kubernetes · NetworkPolicy · Terraform |
 | [microservices2](https://github.com/x-optima/microservices2) | API Gateway и взаимодействие сервисов с хранением файлов и метриками | NGINX · Flask · Node.js · MinIO |
-
-### Полный каталог
-
-Подробности по этим и остальным учебным проектам — в [каталоге Netology-DevOps](https://github.com/x-optima/Netology-DevOps), где репозитории сгруппированы по темам.
-
----
-
-
-→ Все учебные репозитории и задания по темам: **[каталог Netology-DevOps](https://github.com/x-optima/Netology-DevOps)**
 
 ---
 
