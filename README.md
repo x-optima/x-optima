@@ -1,7 +1,5 @@
 # Виталий · DevOps (практика)
 
-**Портфолио:** [Виталий · x-optima](https://github.com/x-optima/x-optima)
-
 **Формат:** удалённо · частичная занятость · совместительство  
 **Локация:** Россия, Республика Саха (Якутия)  
 **GitHub:** [@x-optima](https://github.com/x-optima)
@@ -11,6 +9,8 @@
 Ищу удалённую команду в формате совместительства: Terraform, Ansible, CI, мониторинг на ВМ.
 
 [Telegram](https://t.me/kuchinvn) · [почта](mailto:vkuchin-home@yandex.ru) · [Max](https://set.ki/5wVk9Nj)
+
+**Портфолио:** [Netology-DevOps](https://github.com/x-optima/Netology-DevOps)
 
 ---
 
